@@ -99,9 +99,7 @@ public:
 public:
 	List()
 	{
-		//Reallocate(capacity);
-		data = new T[capacity];
-		memset(data, 0, sizeof(T) * capacity);
+		Reallocate(capacity);
 	}
 	~List()
 	{
@@ -173,8 +171,10 @@ private:
 		{
 			newBlock[i] = data[i];
 		}*/
-		memcpy(newBlock, data, sizeof(T) * capacity);
-
+		if (data)
+		{
+			memcpy(newBlock, data, sizeof(T) * size);
+		}
 
 		// 3. 기존 배열 공간 해제.
 		delete[] data;
