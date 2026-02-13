@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.Array", "1.Array\1.Array.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.Vector", "2.Vector\2.Vector.vcxproj", "{2DC79041-F324-4BFD-8942-3B108A92340B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.LinkedList", "3.LinkedList\3.LinkedList.vcxproj", "{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,10 @@ Global
 		{2DC79041-F324-4BFD-8942-3B108A92340B}.Debug|x64.Build.0 = Debug|x64
 		{2DC79041-F324-4BFD-8942-3B108A92340B}.Release|x64.ActiveCfg = Release|x64
 		{2DC79041-F324-4BFD-8942-3B108A92340B}.Release|x64.Build.0 = Release|x64
+		{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}.Debug|x64.ActiveCfg = Debug|x64
+		{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}.Debug|x64.Build.0 = Debug|x64
+		{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}.Release|x64.ActiveCfg = Release|x64
+		{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
