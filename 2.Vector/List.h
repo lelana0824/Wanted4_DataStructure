@@ -130,8 +130,7 @@ public:
 
 	T& operator[](int index)
 	{
-		assert(index < 0 || index >= size);
-
+		assert(index >= 0 && index < size);
 		return data[index];
 	}
 
