@@ -7,6 +7,9 @@ int main()
 {
 	LinkedList<int> list;
 
+	std::forward_list<int> stdList;
+	
+
 	list.Insert(1);
 	list.Insert(3);
 	list.Insert(2);

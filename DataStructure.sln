@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36908.2 d17.14
+VisualStudioVersion = 17.14.36908.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.Array", "1.Array\1.Array.vcxproj", "{5A2974EF-E0EB-411A-91A7-6FCF38F37FC6}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.Vector", "2.Vector\2.Vector.vcxproj", "{2DC79041-F324-4BFD-8942-3B108A92340B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.LinkedList", "3.LinkedList\3.LinkedList.vcxproj", "{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoublyLinkedList", "DoublyLinkedList\DoublyLinkedList.vcxproj", "{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}.Debug|x64.Build.0 = Debug|x64
 		{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}.Release|x64.ActiveCfg = Release|x64
 		{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}.Release|x64.Build.0 = Release|x64
+		{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}.Debug|x64.ActiveCfg = Debug|x64
+		{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}.Debug|x64.Build.0 = Debug|x64
+		{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}.Release|x64.ActiveCfg = Release|x64
+		{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
