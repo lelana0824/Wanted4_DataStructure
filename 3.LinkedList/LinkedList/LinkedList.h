@@ -16,13 +16,20 @@ public:
 	}
 	~LinkedList()
 	{
-		// todo. 메모리 정리
 		NodeType current = head;
+		NodeType next = nullptr;
 
 		while (current)
 		{
+			next = current->next;
 
+			delete current;
+
+			current = next;
 		}
+
+		head = nullptr;
+		count = 0;
 	}
 
 	void Insert(const T& data)
