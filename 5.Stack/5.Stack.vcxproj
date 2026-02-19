@@ -13,10 +13,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{a42c1c16-ab9c-4de3-b103-c62bf12ccc2f}</ProjectGuid>
-    <RootNamespace>DoublyLinkedList</RootNamespace>
+    <ProjectGuid>{f71037ca-21c7-4861-b16e-db7699ef81ef}</ProjectGuid>
+    <RootNamespace>My5Stack</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>4.DoublyLinkedList</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
@@ -82,8 +81,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LinkedList\LinkedList.h" />
-    <ClInclude Include="LinkedList\Node.h" />
+    <ClInclude Include="Container\Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

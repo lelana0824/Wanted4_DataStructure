@@ -9,7 +9,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2.Vector", "2.Vector\2.Vect
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3.LinkedList", "3.LinkedList\3.LinkedList.vcxproj", "{F533B637-8717-4CD7-8AD9-1EFF5335AE4C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DoublyLinkedList", "DoublyLinkedList\DoublyLinkedList.vcxproj", "{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4.DoublyLinkedList", "DoublyLinkedList\DoublyLinkedList.vcxproj", "{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5.Stack", "5.Stack\5.Stack.vcxproj", "{F71037CA-21C7-4861-B16E-DB7699EF81EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}.Debug|x64.Build.0 = Debug|x64
 		{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}.Release|x64.ActiveCfg = Release|x64
 		{A42C1C16-AB9C-4DE3-B103-C62BF12CCC2F}.Release|x64.Build.0 = Release|x64
+		{F71037CA-21C7-4861-B16E-DB7699EF81EF}.Debug|x64.ActiveCfg = Debug|x64
+		{F71037CA-21C7-4861-B16E-DB7699EF81EF}.Debug|x64.Build.0 = Debug|x64
+		{F71037CA-21C7-4861-B16E-DB7699EF81EF}.Release|x64.ActiveCfg = Release|x64
+		{F71037CA-21C7-4861-B16E-DB7699EF81EF}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
