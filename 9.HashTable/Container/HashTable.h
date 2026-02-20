@@ -10,6 +10,13 @@ public:
 	HashTable();
 	~HashTable();
 
+	void Add(const std::string& key, const std::string& value);
+	void Delete(const std::string& key);
+	bool Find(const std::string& key, Entry& outEntry);
+	void Print();
+
+	bool IsEmpty() const;
+
 private:
 	// 내부 저장소 크기.
 	// - 내부 저장소 크기는 소수(1과 자기자신으로만 나눠지는 수)를 선택하는게 해시 충돌 방지에 좋음.
