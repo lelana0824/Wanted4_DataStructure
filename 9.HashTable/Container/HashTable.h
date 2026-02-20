@@ -10,8 +10,8 @@ public:
 	HashTable();
 	~HashTable();
 
-	void Add(const std::string& key, const std::string& value);
-	void Delete(const std::string& key);
+	bool Add(const std::string& key, const std::string& value);
+	bool Delete(const std::string& key);
 	bool Find(const std::string& key, Entry& outEntry);
 	void Print();
 
