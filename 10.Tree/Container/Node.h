@@ -41,6 +41,7 @@ public:
 		AddChild(new Node<T>(data));
 	}
 
+	
 	// 노드 직접 전달해 자손 추가하는
 	void AddChild(Node<T>* newChild)
 	{

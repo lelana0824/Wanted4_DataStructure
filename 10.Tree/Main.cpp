@@ -14,5 +14,10 @@ int main()
 	{
 		int number2 = 30;
 	}
+
+	
+	// 전위 순회 테스트
+	tree.PreorderTraversal();
+
 	int number = 19;
 }
