@@ -48,7 +48,12 @@ public:
 	// 삭제.
 	bool DeleteNode(const T& deleteData)
 	{
-		// todo 재귀함ㅅ 구현호출.
+		//  재귀함수 구현호출.
+		return DeleteNodeRecursive(
+			root,
+			deleteData,
+			root
+		);
 	}
 	// 검색.
 	bool SearchNode(const T& data, Node<T>*& outNode)
@@ -125,7 +130,7 @@ private:
 	//삭제 재귀 함수
 	bool DeleteNodeRecursive(
 		Node<T>* node,
-		const& deleteData,
+		const T& deleteData,
 		Node<T>*& outNode
 	)
 	{
@@ -165,18 +170,63 @@ private:
 				// 여기에서는 2가지 방법이 가능.
 				// 1. 왼쪽 하위 트리에서 가장 큰 값의 노드를 대체.
 				// 2. 오른쪽 하위 트리에서 가장 작은 값의 노드를 대체.
-				// todo: 부분함수 구현
-				// - 하위 노드에서 최소값 찾는 함수 구현.
+				// 하위 노드에서 최소값 찾는 함수 호출.
+				node->data = SearchMinValue(node->right)->data;
+
+				// 오른쪽 하위 트리에서 가장 작은 값의 노드를 삭제 및 정리
+				DeleteNodeRecursive(node->right, node->data, node->right);
+				
+				return true;
 			}
 
+			// 경우의 수3 - 둘 중에 하나만 있는 경우.
 			else
 			{
+				// 왼쪽 자손이 null -> 오른쪽 자손만 있는 경우
+				if (!node->left)
+				{
+					// 오른쪽 자손 정보를 임시 저장.
+					Node<T>* right = node->right;
 
+					// 오른쪽 자손의 부모를 삭제할 노드의 부모로 설정.
+					right->parent = node->parent;
+
+					// 노드 제거
+					delete node;
+
+					// 오른쪽 자손 정보 설정.
+					outNode = right;
+					return true;
+				}
+				else if (!node->right)
+				{
+					Node<T>* left = node->left;
+
+					left->parent = node->parent;
+
+					delete node;
+
+					outNode = left;
+					return true;
+				}
 			}
-			// 경우의 수3 - 둘 중에 하나만 있는 경우.
 
-			return true;
+			outNode = nullptr;
+			return false;
 		}
+	}
+
+	// 최소값 검색 함수.
+	// node: 검색을 시작하는 노드.
+	Node<T>* SearchMinValue(Node<T>* node)
+	{
+		while (node->left)
+		{
+			// 왼쪽 하위 노드로 이동.
+			node = node->left;
+		}
+
+		return node;
 	}
 
 	// 파괴 함수.
