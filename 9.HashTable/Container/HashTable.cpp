@@ -39,7 +39,7 @@ bool HashTable::Add(const std::string& key, const std::string& value)
     const int length = static_cast<int>(position.size());
     for (int i = 0; i < length; i++)
     {
-        // 중ㅂ독된 키값 확인.
+        // 중복된 키값 확인.
         if (position[i].key == key)
         {
             return false;

@@ -17,12 +17,10 @@ public:
 	Node()
 		: data()
 	{
-
 	}
 
 	Node(const T& data) : data(data)
 	{
-
 	}
 
 	~Node()
@@ -40,8 +38,6 @@ public:
 	{
 		AddChild(new Node<T>(data));
 	}
-
-	
 	// 노드 직접 전달해 자손 추가하는
 	void AddChild(Node<T>* newChild)
 	{
@@ -52,7 +48,6 @@ public:
 	void RemoveChild(Node<T>* child)
 	{
 		// 하위노드까지 순회하면서 노드 검색 후 삭제.
-		// 재귀 함수.
 		RemoveChildRecursive(child);
 	}
 
@@ -97,6 +92,7 @@ private:
 			SafeDelete(child);
 			return;
 		}
+
 		// 자손 노드가 있는 경우
 		while (children.size() > 0)
 		{

@@ -26,7 +26,7 @@ private:
 	// 상용에서는 31을 많이 씀.
 	static const int bucketCount = 19;
 
-	// 이차저장소(해시 충돌 해결 방ㅂ접으로 체이닝.)
+	// 이차저장소(해시 충돌 해결 방법으로 체이닝.)
 	std::vector<Entry> table[bucketCount];
 
 

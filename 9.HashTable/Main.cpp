@@ -24,10 +24,5 @@ int main()
 	table.Delete("AAAA");
 
 	table.Print();
-
-	std::cout << "검색성공: \n";
-	std::cout << outValue.key << "\n";
-	std::cout << outValue.value << "\n";
-
 	std::cin.get();
 }

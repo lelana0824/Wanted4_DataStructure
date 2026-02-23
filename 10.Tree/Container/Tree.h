@@ -14,7 +14,6 @@ public:
 	}
 	~Tree()
 	{
-		//자손노드 모두 제거하는 함수 호출.
 		DestroyRecursive(root);
 	}
 	
@@ -75,7 +74,7 @@ private:
 			return true;
 		}
 
-		std::vector<Node<T>*> & children = node->GetChildren();
+		std::vector<Node<T>*>& children = node->GetChildren();
 		const int length = static_cast<int>(children.size());
 
 		for (int i = 0; i < length; i++)
