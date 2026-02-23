@@ -5,7 +5,7 @@
 
 template<typename T>
 class Node
-{
+{ 
 	template<typename T>
 	friend class BinarySearchTree;
 public:

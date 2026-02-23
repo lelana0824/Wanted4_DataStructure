@@ -1,6 +1,19 @@
 #include <iostream>
 #include "Container/BinarySearchTree.h"
 
+class Test
+{
+public:
+	Test(const int i) : data(i)
+	{
+
+	}
+
+private:
+	int data = 0;
+
+};
+
 int main()
 {
 	BinarySearchTree<int> tree;
@@ -13,10 +26,8 @@ int main()
 	tree.InsertNode(8);
 
 	// ªË¡¶
-	tree.DeleteNode(30);
-	tree.DeleteNode(10);
-	tree.DeleteNode(8);
+	tree.DeleteNode(20);
 
-	
+
 	std::cin.get();
 }

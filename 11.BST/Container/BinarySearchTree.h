@@ -11,8 +11,9 @@ public:
 	}
 
 	~BinarySearchTree()
-	{
-		// todo: 트리 제거 함수 구현 후 호출.
+	 {
+		// 트리 제거 함수 호출.
+		Destroy();
 	}
 
 	// 삽입.
@@ -24,20 +25,24 @@ public:
 	// 3. 추가할 값이 크면 오른쪽에 저장.
 	bool InsertNode(const T& newData)
 	{
-		// 중복 여부 확인.
+		// 0. 중복 여부 확인.
 		Node<T>* outNode = nullptr;
 		if (SearchNode(newData, outNode))
 		{
 			return false;
 		}
 
+		// 1-1. 루트가 null이면 루트 생성.
 		if (!root)
 		{
 			root = new Node<T>(newData);
 			return true;
 		}
 
+		// 1. 루트 노드부터 비교 시작.
 		// 2/3을 처리하기 위해 재귀 함수 호출.
+
+		// 왜 루트를 재할당하지?
 		root = InsertNodeRecursive(
 			root, nullptr, newData
 		);
@@ -78,6 +83,8 @@ private:
 	{
 		if (!node)
 		{
+			// 리턴값 없으려면 여기서 
+			// node = new Node<T>(newData, parent); 가 맞는듯?
 			return new Node<T>(newData, parent);
 		}
 
@@ -171,6 +178,7 @@ private:
 				// 1. 왼쪽 하위 트리에서 가장 큰 값의 노드를 대체.
 				// 2. 오른쪽 하위 트리에서 가장 작은 값의 노드를 대체.
 				// 하위 노드에서 최소값 찾는 함수 호출.
+				// 이미 현재 노드는 최소값으로 대체완료.
 				node->data = SearchMinValue(node->right)->data;
 
 				// 오른쪽 하위 트리에서 가장 작은 값의 노드를 삭제 및 정리
@@ -230,7 +238,35 @@ private:
 	}
 
 	// 파괴 함수.
+	void Destroy()
+	{
+		if (!root) return;
 
+		DestroyRecursive(root);
+	}
+
+	// 파괴 재귀 함수.
+	void DestroyRecursive(Node<T>* node)
+	{
+		if (!node) return;
+
+		// 없어도 됨. 명시적으로 교육목적으로 작성.
+		// 자손이 없는 경우 처리
+		if (!node->left && !node->right)
+		{
+			delete node;
+			return;
+		}
+
+		// 왼쪽 하위 트리 삭제.
+		DestroyRecursive(node->left);
+
+		// 오른쪽 하위 트리 삭제.
+		DestroyRecursive(node->right);
+		
+		delete node;
+		return;
+	}
 private:
 	Node<T>* root = nullptr;
 };
